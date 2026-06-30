@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_MPU6050
+	tristate "MPU6050 Sensor Reader Example"
+	default n
+	---help---
+		Enable the MPU6050 Sensor Reader Example
+
+if EXAMPLES_MPU6050
+
+config EXAMPLES_MPU6050_PROGNAME
+	string "Program name"
+	default "mpu6050"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_MPU6050_PRIORITY
+	int "MPU6050 task priority"
+	default 100
+
+config EXAMPLES_MPU6050_STACKSIZE
+	int "MPU6050 stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif
