@@ -121,8 +121,8 @@ int main(int argc, FAR char *argv[])
       printf("   %4d  |   %7.3f   |   %7.3f   |   %7.3f   |  %5.1f   | %6.1f | %6.1f | %6.1f \n",
              i + 1, ax_g, ay_g, az_g, temp_c, gx_dps, gy_dps, gz_dps);
 
-      /* Sleep for 500ms before reading the next sample */
-      usleep(500 * 1000);
+      /* Sleep for 50ms before reading the next sample */
+      usleep(50 * 1000);
     }
 
   printf("---------------------------------------------------------------------------------\n");
